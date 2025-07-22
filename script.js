@@ -3,9 +3,7 @@ const API_URL = 'https://todo-miniapp.onrender.com/items';
 function createTodoHTML(item) {
   return `
     <div class="item">
-      <form onsubmit="deleteTodo(${item.id}); return false;">
-        <input type="checkbox" onchange="this.form.submit()" />
-      </form>
+      <input type="checkbox" onchange="deleteTodo(${item.id})" />
 
       <p id="title${item.id}">${item.title}</p>
 
